@@ -7,7 +7,7 @@
 <script>
 import {store} from "../assets/data/store"
 export default {
-    name: AppMain,
+    name: "AppMain",
     data () {
         return {
             store

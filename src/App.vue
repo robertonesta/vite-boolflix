@@ -1,8 +1,8 @@
 <script>
-import {store} from "../assets/data/store"
-import AppHeader from "./AppHeader.vue"
-import AppMain from "./AppMain.vue"
-import AppFooter from "./AppFooter.vue"
+import {store} from "./assets/data/store"
+import AppHeader from "./components/AppHeader.vue"
+import AppMain from "./components/AppMain.vue"
+import AppFooter from "./components/AppFooter.vue"
 export default{
     components: {
         AppHeader,
@@ -20,7 +20,7 @@ export default{
 </script>
 
 <template>
-    <AppHeaderVue/>
+    <AppHeader/>
     <AppMain/>
     <AppFooter/>   
   
