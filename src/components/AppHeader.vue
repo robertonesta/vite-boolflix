@@ -17,7 +17,8 @@ export default {
         return {
             store
         }
-    }
+    },
+    
 }
 </script>
 
