@@ -5,12 +5,13 @@
 </template>
 
 <script>
+import {store} from "../assets/data/store"
 export default {
     name: AppFooter,
-    setup () {
-        
-
-        return {}
+    data () {
+        return {
+            store
+        }
     }
 }
 </script>

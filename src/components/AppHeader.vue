@@ -5,13 +5,13 @@
 </template>
 
 <script>
-
+import {store} from "../assets/data/store"
 export default {
     name: AppHeader,
-    setup () {
-        
-
-        return {}
+    data () {
+        return {
+            store
+        }
     }
 }
 </script>
