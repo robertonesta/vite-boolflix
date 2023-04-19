@@ -1,6 +1,6 @@
 <template>
-    <div>
-
+    <div class="text-center">
+        <span><i class="fa-solid fa-copyright"></i> 2023 Roberto Nesta</span>
     </div>
 </template>
 
