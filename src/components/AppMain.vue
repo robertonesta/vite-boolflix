@@ -20,7 +20,7 @@ export default {
     <div class="container d-flex justify-content-between align-items-center">
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
             <MovieElement :movie="movie" v-for="movie in store.movies"></MovieElement>
-            <SeriesElement :series="series" v-for="series in store.series"></SeriesElement>
+            <SeriesElement :TvSeries="TvSeries" v-for="TvSeries in store.TvSeries"></SeriesElement>
         </div>
     </div>
 </template>

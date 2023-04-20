@@ -12,7 +12,7 @@ export default {
         }
     },
     props:{
-        movie: Object
+        TvSeries: Object
     },
     methods:{
         LanguageFlag(language) {
@@ -34,11 +34,12 @@ export default {
 <template>
     <div class="col">
         <div class="movie my-5">
-            <img :src="`${store.Post_pic}${series.poster_path}`" alt="">
-             <h3>Title: {{series.title}}</h3>
-             <span>Original title: {{series.original_title}}</span>
-             <span>Language: <country-flag :country="LanguageFlag(series.original_language)"/></span>
-             <span>Vote: {{series.vote_average}}</span>
+            <img :src="`${store.Post_pic}${TvSeries.poster_path}`" alt="">
+            <h3>Series</h3>
+             <h3>Title: {{TvSeries.name}}</h3>
+             <h3>Original title: {{TvSeries.original_name}}</h3>
+             <h3>Language: <country-flag :country="LanguageFlag(TvSeries.original_language)"/></h3>
+             <h3>Vote: {{TvSeries.vote_average}}</h3>
              
          </div>
     </div>
