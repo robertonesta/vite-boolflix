@@ -34,6 +34,7 @@ export default {
 <template>
     <div class="col">
         <div class="movie my-5">
+            <img :src="`${store.Post_pic}${movie.poster_path}`" alt="">
              <h3>Title: {{movie.title}}</h3>
              <span>Original title: {{movie.original_title}}</span>
              <span>Language: <country-flag :country="LanguageFlag(movie.original_language)"/></span>

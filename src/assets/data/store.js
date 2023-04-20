@@ -9,6 +9,8 @@ export const store = reactive({
        movies: null,
        series: null,
        searchText: '',
+       Post_pic: "https://image.tmdb.org/t/p/w342",
+       
     generateMovie() {
         let url = `${this.base_url + this.movie_path}?api_key=${this.api_key}&query=${this.searchText}}`
         axios
