@@ -33,18 +33,20 @@ export default {
 
 <template>
     <div class="col">
-        <div class="movie my-5">
+        <div class="movie my-5 d-flex flex-column">
             <img :src="`${store.Post_pic}${TvSeries.poster_path}`" alt="">
             <h3>Series</h3>
              <h3>Title: {{TvSeries.name}}</h3>
-             <h3>Original title: {{TvSeries.original_name}}</h3>
-             <h3>Language: <country-flag :country="LanguageFlag(TvSeries.original_language)"/></h3>
-             <h3>Vote: {{TvSeries.vote_average}}</h3>
+             <span>Original title: {{TvSeries.original_name}}</span>
+             <span>Language: <country-flag :country="LanguageFlag(TvSeries.original_language)"/></span>
+             <span v-html="store.StarsGenerator(store.ScoreConverter(TvSeries.vote_average))"></span>
              
          </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+
+
 
 </style>

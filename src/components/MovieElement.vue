@@ -4,7 +4,7 @@ import CountryFlag from 'vue-country-flag-next'
 export default {
     name: "MovieElement",
     components:{
-        CountryFlag
+        CountryFlag,
     },
     data () {
         return {
@@ -33,13 +33,12 @@ export default {
 
 <template>
     <div class="col">
-        <div class="movie my-5">
+        <div class="movie my-5 d-flex flex-column">
             <img :src="`${store.Post_pic}${movie.poster_path}`" alt="">
-             <h3>Title: {{movie.title}}</h3>
-             <span>Original title: {{movie.original_title}}</span>
-             <span>Language: <country-flag :country="LanguageFlag(movie.original_language)"/></span>
-             <span>Vote: {{movie.vote_average}}</span>
-             
+            <h3>Title: {{movie.title}}</h3>
+            <span>Original title: {{movie.original_title}}</span>
+            <span class="d-flex align-items-center">Language: <country-flag :country="LanguageFlag(movie.original_language)"/></span>
+            <span v-html="store.StarsGenerator(store.ScoreConverter(movie.vote_average))"></span>             
          </div>
     </div>
 </template>
