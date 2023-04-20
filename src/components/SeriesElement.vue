@@ -2,7 +2,7 @@
 import {store} from "../assets/data/store"
 import CountryFlag from 'vue-country-flag-next'
 export default {
-    name: "MovieElement",
+    name: "SeriesElement",
     components:{
         CountryFlag
     },
@@ -34,10 +34,10 @@ export default {
 <template>
     <div class="col">
         <div class="movie my-5">
-             <h3>Title: {{movie.title}}</h3>
-             <span>Original title: {{movie.original_title}}</span>
-             <span>Language: <country-flag :country="LanguageFlag(movie.original_language)"/></span>
-             <span>Vote: {{movie.vote_average}}</span>
+             <h3>Title: {{series.title}}</h3>
+             <span>Original title: {{series.original_title}}</span>
+             <span>Language: <country-flag :country="LanguageFlag(series.original_language)"/></span>
+             <span>Vote: {{series.vote_average}}</span>
              
          </div>
     </div>

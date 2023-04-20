@@ -2,15 +2,33 @@ import { reactive } from "vue";
 import axios from "axios";
 export const store = reactive({
        loading: true,
-       API_URL: "https://api.themoviedb.org/3/search/movie?api_key=cd28b0ceccbbd01cf038f60ad166f105&query=",
+       base_url: "https://api.themoviedb.org/3/",
+       api_key: "cd28b0ceccbbd01cf038f60ad166f105",
+       movie_path: "search/movie",
+       series_path: "search/tv",
        movies: null,
-       searchMovie: '',
+       series: null,
+       searchText: '',
     generateMovie() {
-        let url = this.API_URL + this.searchMovie
+        let url = `${this.base_url + this.movie_path}?api_key=${this.api_key}&query=${this.searchText}}`
         axios
         .get(url)
         .then((response) => {
             this.movies = response.data.results;
+            this.loading = false;
+        })
+        .catch((err) => {
+            console.log(err);
+            console.error(err.message);
+        });
+    },
+    generateSeries() {
+        let url = `${this.base_url + this.series_path}?api_key=${this.api_key}&query=${this.searchText}}`
+        axios
+        .get(url)
+        .then((response) => {
+            console.log("ciao")
+            this.series = response.data.results;
             this.loading = false;
         })
         .catch((err) => {
