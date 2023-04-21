@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 .main{
-    background: linear-gradient(#000 80%, #1111);
+    background:	#E50914;
     height: calc(100vh - 21vh);
     overflow-y: auto;
 }

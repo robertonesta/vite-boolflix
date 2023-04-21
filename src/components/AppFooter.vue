@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer{
-    background: linear-gradient(#1111, #000 20%);
+    background: black;
     color: white;
     height: 7vh;
 }

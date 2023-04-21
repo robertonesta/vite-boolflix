@@ -33,13 +33,15 @@ export default {
 
 <template>
     <div class="col">
-        <div class="movie my-5 d-flex flex-column h-100">
-            <img v-if="movie.poster_path === null" src="../assets/img/imagenotavailable.jpg" class="img-fluid" alt="">
-            <img v-else :src="`${store.Post_pic}${movie.poster_path}`" class="img-fluid" alt="">
-            <h3>Title: {{movie.title}}</h3>
-            <span>Original title: {{movie.original_title}}</span>
-            <span class="d-flex align-items-center">Language: <country-flag :country="LanguageFlag(movie.original_language)"/></span>
-            <span v-html="store.StarsGenerator(store.ScoreConverter(movie.vote_average))"></span>             
+        <div class="movie flex-column my-3">
+                <img v-if="movie.poster_path === null" src="../assets/img/imagenotavailable.jpg" class="img-fluid" alt="">
+                <img v-else :src="`${store.Post_pic}${movie.poster_path}`" class="img-fluid" alt="">
+            <div class="infos py-2 flex-column">
+                <h4>Title: {{movie.title}}</h4>
+                <span>Original title: {{movie.original_title}}</span>
+                <span><country-flag :country="LanguageFlag(movie.original_language)"/></span>
+                <span v-html="store.StarsGenerator(store.ScoreConverter(movie.vote_average))"></span>
+            </div>
          </div>
     </div>
 </template>

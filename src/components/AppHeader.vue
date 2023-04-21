@@ -4,8 +4,8 @@
                 <img src="../assets/img/netflix-logo-drawing-png-19.png" width="180" alt="">
             </div>
             <div class="input-group-s d-flex">
-                <input v-model.trim="store.searchText" type="text" class="form-control" placeholder="Search movie or tv show" aria-describedby="button-addon2" @change="store.generateMovie(), store.generateTvSeries()">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="store.generateMovie(), store.generateTvSeries()">Search</button>
+                <input v-model.trim="store.searchText" type="text" class="form-control rounded-left" placeholder="Search movie or tv show" aria-describedby="button-addon2" @change="store.generateMovie(), store.generateTvSeries()">
+                <button class="btn btn-outline-secondary rounded-right" type="button" id="button-addon2" @click="store.generateMovie(), store.generateTvSeries()">Search</button>
             </div>
         </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .header{
-    background: linear-gradient(#000 80%, #1111);
+    background: black;
     height: 14vh;
 }
 

@@ -6,3 +6,30 @@ svg{
     aspect-ratio: 1/1;
     fill: gold;
 }
+
+.col{
+    img{
+        height: 400px;
+    }
+}
+.TvSeries, .movie{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    position: relative;
+    &:hover{
+        .infos{
+            display: flex;
+        }
+        img{
+            filter:brightness(0.2);
+        }
+    }
+    .infos{
+        text-align: center;
+        display: none;
+        position: absolute;
+        height: 250px;
+        top: 30%;
+    }
+}
