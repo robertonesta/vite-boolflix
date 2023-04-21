@@ -33,9 +33,9 @@ export default {
 
 <template>
     <div class="col">
-        <div class="movie flex-column my-3">
-                <img v-if="movie.poster_path === null" src="../assets/img/imagenotavailable.jpg" class="img-fluid" alt="">
-                <img v-else :src="`${store.Post_pic}${movie.poster_path}`" class="img-fluid" alt="">
+        <div class="movie my-3">
+                <img v-if="movie.poster_path === null" src="../assets/img/imagenotavailable.jpg" alt="">
+                <img v-else :src="`${store.Post_pic}${movie.poster_path}`" alt="">
             <div class="infos py-2 flex-column">
                 <h4>Title: {{movie.title}}</h4>
                 <span>Original title: {{movie.original_title}}</span>

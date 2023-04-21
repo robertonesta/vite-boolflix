@@ -6,8 +6,8 @@ export const store = reactive({
        api_key: "cd28b0ceccbbd01cf038f60ad166f105",
        movie_path: "search/movie",
        TvSeries_path: "search/tv",
-       movies: null,
-       TvSeries: null,
+       movies: [],
+       TvSeries: [],
        searchText: '',
        Post_pic: "https://image.tmdb.org/t/p/w342",      
 

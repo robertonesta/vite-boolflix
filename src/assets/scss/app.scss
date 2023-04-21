@@ -1,7 +1,8 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .main{
-    background:	#E50914;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(229,9,20,1) 7%, rgba(229,9,20,1) 89%, rgba(0,0,0,1) 100%);
     height: calc(100vh - 21vh);
     overflow-y: auto;
 }
@@ -15,11 +16,11 @@ svg{
 .col{
     img{
         height: 400px;
+        width: 100%;
     }
 }
 .TvSeries, .movie{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.5);
     color: white;
     position: relative;
     &:hover{
@@ -35,7 +36,5 @@ svg{
         text-align: center;
         display: none;
         position: absolute;
-        height: 250px;
-        top: 30%;
     }
 }

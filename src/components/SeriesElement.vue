@@ -34,8 +34,8 @@ export default {
 <template>
     <div class="col">
         <div class="TvSeries my-3 flex-column">
-                <img v-if="TvSeries.poster_path === null" src="../assets/img/imagenotavailable.jpg" class="img-fluid" alt="">
-                <img v-else :src="`${store.Post_pic}${TvSeries.poster_path}`" class="img-fluid" alt="">
+                <img v-if="TvSeries.poster_path === null" src="../assets/img/imagenotavailable.jpg" alt="">
+                <img v-else :src="`${store.Post_pic}${TvSeries.poster_path}`" alt="">
             <div class="infos py-2 flex-column">
                 <h4>Title: {{TvSeries.name}}</h4>
                 <span>Original title: {{TvSeries.original_name}}</span>
