@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center">
+    <div class="footer text-center py-3">
         <span><i class="fa-solid fa-copyright"></i> 2023 Roberto Nesta</span>
     </div>
 </template>
@@ -17,5 +17,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.footer{
+    background: linear-gradient(#1111, #000 20%);
+    color: white;
+    height: 7vh;
+}
 
 </style>

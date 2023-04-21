@@ -33,8 +33,9 @@ export default {
 
 <template>
     <div class="col">
-        <div class="movie my-5 d-flex flex-column">
-            <img :src="`${store.Post_pic}${TvSeries.poster_path}`" alt="">
+        <div class="movie my-5 d-flex flex-column h-100">
+            <img v-if="TvSeries.poster_path === null" src="../assets/img/imagenotavailable.jpg" class="img-fluid" alt="">
+            <img v-else :src="`${store.Post_pic}${TvSeries.poster_path}`" class="img-fluid" alt="">
             <h3>Series</h3>
              <h3>Title: {{TvSeries.name}}</h3>
              <span>Original title: {{TvSeries.original_name}}</span>
