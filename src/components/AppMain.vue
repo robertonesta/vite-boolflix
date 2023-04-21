@@ -18,12 +18,18 @@ export default {
 
 <template>
     <div class="main">
-        <div class=" container d-flex justify-content-between align-items-center">
+        <div class=" container py-3 text-light">
+            <h2 v-if="store.movies.length > 0">Movies</h2>
             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
                 <MovieElement :movie="movie" v-for="movie in store.movies"></MovieElement>
-                <SeriesElement :TvSeries="TvSeries" v-for="TvSeries in store.TvSeries"></SeriesElement>
             </div>
         </div>
+        <div class="container py-3 text-light">
+            <h2 v-if="store.TvSeries.length > 0">Tv Series</h2>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+                <SeriesElement :TvSeries="TvSeries" v-for="TvSeries in store.TvSeries"></SeriesElement>
+            </div>
+        </div>            
     </div>
 </template>
 

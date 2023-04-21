@@ -25,6 +25,7 @@ svg{
     &:hover{
         .infos{
             display: flex;
+            text-align: center;
         }
         img{
             filter:brightness(0.2);
