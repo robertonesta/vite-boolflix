@@ -41,6 +41,7 @@ export default {
                 <span>Original title: {{TvSeries.original_name}}</span>
                 <span><country-flag :country="LanguageFlag(TvSeries.original_language)"/></span>
                 <span v-html="store.StarsGenerator(store.ScoreConverter(TvSeries.vote_average))"></span>
+                <span>Overview: {{ TvSeries.overview }}</span>
             </div>
              
          </div>

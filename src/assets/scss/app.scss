@@ -39,4 +39,9 @@ svg{
         display: none;
         position: absolute;
     }
+    .overview{
+        margin: 1rem 0;
+        height: 150px;
+        overflow-y: scroll;
+    }
 }

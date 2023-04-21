@@ -41,6 +41,7 @@ export default {
                 <span>Original title: {{movie.original_title}}</span>
                 <span><country-flag :country="LanguageFlag(movie.original_language)"/></span>
                 <span v-html="store.StarsGenerator(store.ScoreConverter(movie.vote_average))"></span>
+                <span class="overview">Overview: {{ movie.overview }}</span>
             </div>
          </div>
     </div>
