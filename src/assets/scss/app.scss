@@ -1,5 +1,10 @@
 @use "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+.main{
+    background:	#E50914;
+    height: calc(100vh - 21vh);
+    overflow-y: auto;
+}
 
 svg{
     width: 20px;

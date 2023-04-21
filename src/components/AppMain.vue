@@ -28,10 +28,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.main{
-    background:	#E50914;
-    height: calc(100vh - 21vh);
-    overflow-y: auto;
-}
+
 
 </style>
