@@ -23,6 +23,8 @@ svg{
     display: flex;
     color: white;
     position: relative;
+    justify-content: center;
+    align-items: center;
     &:hover{
         .infos{
             display: flex;
